@@ -16,6 +16,7 @@
 
 var path = require("path");
 var when = require("when");
+var fs = require("fs");
 
 var settings = module.exports = {
     uiPort: process.env.PORT || 1880,
@@ -27,7 +28,7 @@ var settings = module.exports = {
     nodesDir: path.join(__dirname,"nodes"),
 
     // Blacklist the non-bluemix friendly nodes
-    nodesExcludes:[ '66-mongodb.js','75-exec.js','35-arduino.js','36-rpi-gpio.js','25-serial.js','28-tail.js','50-file.js','31-tcpin.js','32-udp.js','23-watch.js' ],
+    nodesExcludes:[ '66-mongodb.js','35-arduino.js','36-rpi-gpio.js','25-serial.js','31-tcpin.js','32-udp.js' ],
 
     // Enable module reinstalls on start-up; this ensures modules installed
     // post-deploy are restored after a restage
@@ -77,5 +78,5 @@ if (process.env.NODE_RED_USERNAME && process.env.NODE_RED_PASSWORD) {
     }
 }
 
-settings.mongoAppname = 'nodered';
-settings.mongoUrl = process.env.MONGODB_URI;
+//settings.mongoAppname = 'nodered';
+//settings.mongoUrl = process.env.MONGODB_URI;
