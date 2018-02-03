@@ -75,7 +75,12 @@ if (process.env.NODE_RED_USERNAME && process.env.NODE_RED_PASSWORD) {
                 return when.resolve(null);
             }
         }
-    }
+    },
+        editorTheme: {
+       projects: {
+           enabled: true
+       }
+   }
 }
 
 //settings.mongoAppname = 'nodered';
