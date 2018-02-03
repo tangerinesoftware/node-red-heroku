@@ -23,7 +23,11 @@ var settings = module.exports = {
     mqttReconnectTime: 15000,
     serialReconnectTime: 15000,
     debugMaxLength: 10000000,
-
+    editorTheme: {
+       projects: {
+           enabled: true
+       }
+   },
     // Add the nodes in
     nodesDir: path.join(__dirname,"nodes"),
 
